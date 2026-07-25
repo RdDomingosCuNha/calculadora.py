@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Processador de Planilhas</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📊 Processador de Planilhas</h1>
+
+    <p>
+        Envie os dois arquivos Excel
+        para cruzamento de dados
+    </p>
+
+    <form action="/upload"
+          method="POST"
+          enctype="multipart/form-data">
+
+        <div class="input-group">
+
+            <label>📁 Planilha 1:</label>
+
+            <input type="file"
+                   name="file1"
+                   required>
+
+        </div>
+
+        <div class="input-group">
+
+            <label>📁 Planilha 2:</label>
+
+            <input type="file"
+                   name="file2"
+                   required>
+
+        </div>
+
+        <button type="submit">
+             Processar
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
